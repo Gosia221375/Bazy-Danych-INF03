@@ -1,0 +1,28 @@
+Zadania:
+Wyświetlanie danych:
+
+Wyświetl wszystkie dane z tabeli uczniowie.
+Posortuj wyniki według wieku uczniów w kolejności rosnącej.
+Filtrowanie:
+
+Wyświetl imiona i nazwiska uczniów z klasy 1A.
+Znajdź wszystkich uczniów, którzy mają 16 lat.
+Wyświetl uczniów, którzy są młodsi niż 15 lat.
+Zapytania z funkcjami agregującymi:
+
+Oblicz średni wiek uczniów.
+Policz, ilu jest uczniów w klasie 2A.
+Znajdź minimalny i maksymalny wiek ucznia w bazie.
+Zapytania z warunkami:
+
+Wyświetl uczniów, którzy mają 15 lat i należą do klasy 1C.
+Znajdź uczniów, którzy mają na nazwisko zaczynające się na literę "K".
+Dodawanie i aktualizacja danych:
+
+Dodaj nowego ucznia o imieniu "Ola", nazwisku "Nowicka", wieku 14 i klasie 1A.
+Zmień wiek ucznia o nazwisku "Zielińska" na 16.
+Usuń ucznia z klasy 3B.
+Zaawansowane filtrowanie:
+
+Wyświetl listę klas i liczbę uczniów w każdej z nich.
+Znajdź wszystkie klasy, w których są uczniowie młodsi niż 15 lat.

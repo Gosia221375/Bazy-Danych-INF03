@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS1</title>
+        <style>
+            body {
+                background-color: rgb(146, 228, 228);
+                color: rgb(21, 103, 255);
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let zamknij=confirm("Czy chcesz opuścić stronę?");
+            if (zamknij) {
+                window.close();
+            }
+
+            alert("Witaj na mojej stronie! :)"); //okienko wyskakujące
+            confirm("Czy chcesz opuścić stronę?"); //do wyboru: tak lub nie
+            let imie=prompt("Podaj imię");
+            alert("Witaj " + imie + "!");
+
+            let a=parseInt(prompt("Podaj liczbę a"));
+            let b=parseInt(prompt("Podaj liczbę b"));
+            let suma=a+b;
+            alert(suma);
+
+            //let c=parseInt(prompt("Podaj liczbę c"));
+            //let d=parseInt(prompt("Podaj liczbę d"));
+            //let iloraz=parseFloat(c/d);
+            //alert(iloraz);
+
+            let e=parseFloat(prompt("Podaj liczbę e"));
+            let f=parseFloat(prompt("Podaj liczbę f"));
+            if (f!=0) {
+                let iloraz=e/f;
+                alert(iloraz);
+            }
+
+            let g=parseInt(prompt("Podaj liczbę g"));
+            let h=parseInt(prompt("Podaj liczbę h"));
+            let reszta=g%h;
+            alert(reszta);
+
+            //Zmienne: char, string, int, float, boolean
+            //parseInt - zmienia ciąg znaków na Integer
+        </script>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS2</title>
+        <style>
+            body {
+                background-color: rgb(146, 228, 228);
+                color: rgb(21, 103, 255);
+                text-align: left;
+            }
+        </style>
+        <script>
+            /*let a,b,c,d,e,f,g,h;
+
+            function dodaj() {
+                a=parseInt(document.getElementById("a").value);
+                b=parseInt(document.getElementById("b").value);
+                let suma=a+b;
+                alert(suma);
+            }
+
+            function odejmij() {
+                c=parseInt(document.getElementById("c").value);
+                d=parseInt(document.getElementById("d").value);
+                let roznica=c-d;
+                alert(roznica);
+            }
+
+            function pomnoz() {
+                e=parseInt(document.getElementById("e").value);
+                f=parseInt(document.getElementById("f").value);
+                let iloczyn=e*f;
+                alert(iloczyn);
+            }
+
+            function podziel() {
+                g=parseFloat(document.getElementById("g").value);
+                h=parseFloat(document.getElementById("h").value);
+                let iloraz=g/h;
+                alert(iloraz);
+            }*/
+
+            //let a,b;
+
+            function dodaj() {
+                a=parseInt(document.getElementById("a").value);
+                b=parseInt(document.getElementById("b").value);
+                let suma=a+b;
+                //alert(suma);
+                document.getElementById("wynik").value=+suma;
+            }
+
+            function odejmij() {
+                a=parseInt(document.getElementById("a").value);
+                b=parseInt(document.getElementById("b").value);
+                let roznica=a-b;
+                //alert(roznica);
+                document.getElementById("wynik").value=+roznica;
+            }
+
+            function pomnoz() {
+                a=parseInt(document.getElementById("a").value);
+                b=parseInt(document.getElementById("b").value);
+                let iloczyn=a*b;
+                //alert(iloczyn);
+                document.getElementById("wynik").value=+iloczyn;
+            }
+
+            function podziel() {
+                a=parseFloat(document.getElementById("a").value);
+                b=parseFloat(document.getElementById("b").value);
+                let iloraz=a/b;
+                //alert(iloraz);
+                document.getElementById("wynik").value=+iloraz;
+            }
+
+            function reszta() {
+                a=parseInt(document.getElementById("a").value);
+                b=parseInt(document.getElementById("b").value);
+                let modulo=a%b;
+                //alert(modulo);
+                document.getElementById("wynik").value=+modulo;
+            }
+
+            function dzialanie() {
+                dzialanie1=document.getElementById("operator").value;
+                if (dzialanie1=='+') {
+                    dodaj();
+                }
+                if (dzialanie1=='-') {
+                    odejmij();
+                }
+                if (dzialanie1=='*') {
+                    pomnoz();
+                }
+                if (dzialanie1=='/' || dzialanie1==':') {
+                    podziel();
+                }
+                if (dzialanie1=='%') {
+                    reszta();
+                }
+                //document.getElementById("operator").value="";
+                //location.reload();
+            }
+
+
+// ....................................................
+
+
+            let a,b,c;
+            function rownanie() {
+                a=parseInt(document.getElementById("a").value);
+                b=parseInt(document.getElementById("b").value);
+                c=parseInt(document.getElementById("c").value);
+                let del=(b*b)-(4*a*c);
+                alert(del);
+                if (del>0) {
+                    //let pdel=Math.sqrt(del); //pdel = a^n
+                    let pdel=Math.pow(del,0.5);
+                    alert(pdel);
+                    let x1=(-b-pdel)/2*a;
+                    let x2=(-b+pdel)/2*a;
+                    document.getElementById("wynik").innerHTML="Delta = "+del+"<br> pdel = "+pdel+"<br>x1 = "+x1+"<br>x2 = "+x2;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- <input type="number" id="a"> + <input type="number" id="b"> <button onclick="dodaj()">=</button> <br><br>
+        <input type="number" id="c"> - <input type="number" id="d"> <button onclick="odejmij()">=</button> <br><br>
+        <input type="number" id="e"> * <input type="number" id="f"> <button onclick="pomnoz()">=</button> <br><br>
+        <input type="number" id="g"> / <input type="number" id="h"> <button onclick="podziel()">=</button> <br><br> -->
+
+       <!-- to było zad 2, zakomentowane żeby zadziałało zad 3 <input type="number" id="a"> <input type="text" id="operator" size="1"> <input type="number" id="b"> = <input type="text" id="wynik" readonly> <button onclick="dzialanie()">=</button> <br><br> -->
+
+
+<!-- .................................................... -->
+
+
+        podaj a<input type="number" id="a"> <br>
+        podaj b<input type="number" id="b"> <br>
+        podaj c<input type="number" id="c"> <br>
+        <button onclick="rownanie()"> = </button> <br>
+        <div id="wynik"></div>
+    </body>
+</html>
