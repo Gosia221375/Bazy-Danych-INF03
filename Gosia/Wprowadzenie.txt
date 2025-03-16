@@ -7,3 +7,9 @@ XAMMP, VS Code
 3cWpmuH1aK4K8 - hasło do wifi
 
 nauczycielwarzynski.cba.pl
+
+
+----------------
+
+
+http://localhost/phpmyadmin
