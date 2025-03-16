@@ -1,0 +1,54 @@
+<html>
+    <body>
+<script>
+ let sumakontrolna=[1,3,7,9,1,3,7,9,1,3];
+ let pesel; //=prompt("podaj pesel");
+ pesel="11011111116";
+ let suma=0;
+ let rok="19"+pesel[0]+pesel[1];
+ let m=pesel[2]+pesel[3];
+document.write(m);
+ let miesiac=parseInt(m);
+ document.write("<br>"+miesiac);
+ let dzien=pesel[4]+pesel[5];
+ let plec=parseInt(pesel[10]);
+ let dl=sumakontrolna.length-1;
+ for (let a=0;a<=dl;a++){
+   suma+=sumakontrolna[a]*(parseInt(pesel[a]));
+  //document.write(suma+"<br>");
+ }
+//document.write(suma);
+let sk=String(suma); //zamiana sumy na string
+let dlsk=sk.length-1; //obliczanie dlugosci  zmiennej sk
+let wartosc=sk[dlsk];document.write(wartosc); //pobieranie ostatniego znaku za sk
+let wartoscint=parseInt(wartosc); //zamiana osostniego znaku na liczbę
+let spr=10-wartoscint; 
+//odejmowanie od 10 w celu porownania z ost wartoscia pesel
+let ostnrpesel=parseInt(pesel[10]);
+//pobieranie oststniej wartosci pesel
+ if (spr==ostnrpesel) { document.write("PESEL JEST PRAWIDLOWY");}
+    else document.write(" Pesel nieprawidłowy");
+let mslownie;
+if (miesiac=1) mslownie="styczeń";
+if (miesiac=2) mslownie="luty";
+if (miesiac=3) mslownie="marzec";
+if (miesiac=4) mslownie="kwiecień";
+if (miesiac=5) mslownie="maj";
+if (miesiac=6) mslownie="czerwiec";
+if (miesiac=7) mslownie="lipiec";
+if (miesiac=8) mslownie="sierpień";
+if (miesiac=9) mslownie="wrzesien";
+if (miesiac=10) mslownie="październik";
+if (miesiac=11) mslownie="listopad";
+if (miesiac=12) mslownie="grudzień";
+let tabm=["","styczen","luty","marzec","kwiecien","maj","czerwiec","lipiec","sierpien","wrzesien","październik","listopad","grudzien"];
+
+
+    document.write("<br> Rok "+rok+"<BR>");
+    document.write("Miesiac "+mslownie+"<BR>");
+    document.write("Dzień "+dzien+"<BR>");
+        let p=(plec%2);
+        if (p==0)  {document.write("plec : K <BR>");}
+        if (p==1)  document.write("plec : M <BR>");    
+       
+       </script>

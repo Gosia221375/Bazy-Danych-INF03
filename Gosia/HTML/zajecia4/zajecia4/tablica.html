@@ -1,0 +1,25 @@
+<html>
+    <body>
+<script>
+ let tabliczb=[0,1,2,3,4,5,6];
+ let w=tabliczb.length;
+ /*let tabowoce=["jabłko","banan","gruszka"];
+    for (let a=0;a<w;a++){
+            document.write(a+" "+tabliczb[a]);
+            document.write("<br>");
+    }*/
+   let slowo2="";
+    let slowo=prompt("podaj wyraz");
+        document.write(slowo+" ");
+        let dl=slowo.length-1;
+for (let b=dl; b>=0;b--){
+    slowo2+=(slowo[b]);
+}
+if (slowo2==slowo) document.write("jest to palindrom");
+else document.write(" to nie jest palindrom");
+
+</script>
+
+
+    </body>
+</html>
