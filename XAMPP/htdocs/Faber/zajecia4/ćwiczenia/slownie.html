@@ -1,0 +1,54 @@
+<html>
+    <body>
+        <script>
+            let jednostki=["","jeden","dwa","trzy","cztery","pięć","sześć","siedem","osiem","dziewięć"];
+            let nascie=["","jedenaście","dwanaście","trzynaście","czternaście","piętnaście","szesnaście","siedemnaście","osiemnaście","dziewiętnaście"];
+            let dziesiatki=["","dziesięć","dwadzieścia","trzydzieści","czterdzieści","pięćdziesiąt","sześćdziesiąt","siedemdziesiąt","osiemdziesiąt","dziewięćdziesiąt"];
+            let setki=["","sto","dwieście","trzysta","czterysta","pięćset","sześćset","siedemset","osiemset","dziewięćset"];
+            let tysiace=["","tysiąc","dwa tysiące","trzy tysiące","cztery tysiące","pięć tysięcy","sześć tysięcy","siedem tysięcy","osiem tysięcy","dziewięć tysięcy"];
+
+            let slownie="";
+            let liczba=parseInt(prompt("Podaj liczbę"));
+
+            
+
+            if ((liczba>=1000) && (liczba<10000)) {
+                let t=Math.floor(liczba/1000);
+                if (t==1) {
+                    slownie+=jednostki[t]+" tysiąc ";
+                }
+                if ((t>1) && (t<=4)) {
+                    slownie+=jednostki[t]+" tysiące ";
+                }
+                if ((t>=5) && (t<=9)) {
+                    slownie+=jednostki[t]+" tysięcy ";
+                }
+                liczba=liczba-(t*1000);
+            }
+
+            if ((liczba>=100) && (liczba<1000)) {
+                let s=Math.floor(liczba/100);
+                slownie+=setki[s]+" ";
+                liczba=liczba-(s*100);
+            }
+
+            //document.write("Słownie to "+jednostki[liczba]);
+            if ((liczba>=20) && (liczba<100)) {
+                let d=Math.floor(liczba/10); //95 ->d=9
+                slownie+=dziesiatki[d]+" ";
+                liczba=liczba-(d*10); //liczba=95-90=5
+            }
+
+            if ((liczba>10) && (liczba<20)) {
+                let n=liczba%10;
+                slownie+=nascie[n]+" ";
+            }
+
+            if ((liczba>0) && (liczba<10)) {
+                slownie+=jednostki[liczba]; //liczba=5
+            }
+
+            document.write("Słownie to "+slownie)
+        </script>
+    </body>
+</html>

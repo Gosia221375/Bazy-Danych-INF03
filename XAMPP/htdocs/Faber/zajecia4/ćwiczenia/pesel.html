@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<body>
+    <script>
+        let sumakontrolna=[1,3,7,9,1,3,7,9,1,3];
+        let pesel;//=prompt("Podaj pesel");
+        pesel="11111111116";
+        let suma=0;
+        let rok="19"+pesel[0]+pesel[1];
+        let miesiac=parseInt(pesel[2]+pesel[3]);
+        let dzien=pesel[4]+pesel[5];
+        let plec=parseInt(pesel[10]);
+        let dl=sumakontrolna.length-1;
+        for (let a=0;a<=dl;a++) {
+            suma+=sumakontrolna[a]*(parseInt(pesel[a]));
+        }
+        //document.write(suma);
+        let sk=String(suma); //zamiana sumy na String
+        let dlsk=sk.length-1; //obliczanie długości zmiennej sk
+        let wartosc=sk[dlsk];document.write(wartosc); //pobieranie ostatniego znaku za sk
+        let wartoscint=parseInt(wartosc); //zamiana ostatniego znaku na liczbę
+        let spr=10-wartoscint; //odejmowanie od 10 w celu porównania z ost wartością pesel
+        let ostnrpesel=parseInt(pesel[10]); //pobieranie ostatniej wartości pesel
+        if (spr==ostnrpesel) document.write(" PESEL jest prawidłowy");
+        else document.write(" PESEL jest nieprawidłowy")
+
+        let mslownie;
+        if (miesiac=1) mslownie="styczeń";
+        if (miesiac=2) mslownie="luty";
+        if (miesiac=3) mslownie="marzec";
+        if (miesiac=4) mslownie="kwiecień";
+        if (miesiac=5) mslownie="maj";
+        if (miesiac=6) mslownie="czerwiec";
+        if (miesiac=7) mslownie="lipiec";
+        if (miesiac=8) mslownie="sierpień";
+        if (miesiac=9) mslownie="wrzesień";
+        if (miesiac=10) mslownie="październik";
+        if (miesiac=11) mslownie="listopad";
+        if (miesiac=12) mslownie="grudzień";
+        let tabm=["","styczeń","luty","marzec","kwiecień","maj","czerwiec","lipiec","sierpień","wrzesień","październik","listopad","grudzień"];
+
+
+        document.write("<br>Rok "+rok+"<br>");
+        document.write("Miesiąc "+mslownie+"<br>");
+        document.write("Dzień "+dzien+"<br>");
+        let p=(plec%2);
+        if (p==0) document.write("Płeć: K <br>");
+        if (p==1) document.write("Płeć: M <br>");
+
+    </script>
+</body>
+</html>

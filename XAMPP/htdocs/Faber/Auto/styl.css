@@ -1,0 +1,84 @@
+body {
+    margin: 0%;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 140, 255);
+    background-color: rgb(134, 192, 226);
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
+
+#kontener {
+
+}
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+#header, #footer {
+    background-color: rgb(0, 110, 255);
+    color: antiquewhite;
+    padding: 5px;
+    font-size: 150%;
+}
+
+#header {
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(55, 79, 218);
+    padding: 20px;
+    color: rgb(165, 202, 235);
+}
+
+#menu {
+    background-color: rgb(22, 25, 214);
+    text-align: left;
+}
+
+#lewy {
+    background-color: rgb(162, 233, 238);
+    color: rgb(52, 133, 199);
+    width: 60%;
+    height: 322px;
+    text-align: left;
+    float: left;
+}
+
+#prawy {
+    background-color: rgb(31, 74, 214);
+    width: 40%;
+    height: 322px;
+    float: left;
+}
+
+#samochod {
+    margin: 40px;
+    padding: 10px;
+}
+
+#samochod:hover {
+    border: 1px dotted rgb(255, 0, 157);
+}
+
+a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: aqua;
+}
+
+table, td {
+    border: 1px solid rgb(19, 0, 128);
+}
+
+table {
+    width: 90%;
+}
+
+form {
+    text-align: left;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>KALKULATOR</title>
+        <link rel="stylesheet" href="styl2.css">
+    </head>
+    <body>
+        <h1>Kalkulator</h1>
+        <table>
+            <tr>
+                <td colspan="4"> <input type="text" id="pasek"></td>
+            </tr>
+            <tr>
+                <td> <button onclick="siedem()">7</button> </td>
+                <td> <button onclick="osiem()">8</button> </td>
+                <td> <button onclick="dziewiec()">9</button> </td>
+                <td> <button onclick="podziel()">/</button> </td>
+            </tr>
+            <tr>
+                <td> <button onclick="cztery()">4</button> </td>
+                <td> <button onclick="piec()">5</button> </td>
+                <td> <button onclick="szesc()">6</button> </td>
+                <td> <button onclick="pomnoz()">*</button> </td>
+            </tr>
+            <tr>
+                <td> <button onclick="jeden()">1</button> </td>
+                <td> <button onclick="dwa()">2</button> </td>
+                <td> <button onclick="trzy()">3</button> </td>
+                <td> <button onclick="odjac()">-</button> </td>
+            </tr>
+            <tr>
+                <td> <button onclick="zero()">0</button> </td>
+                <td> <button onclick="wyczysc()">C</button> </td>
+                <td> <button onclick="rowna()">=</button> </td>
+                <td> <button onclick="dodaj()">+</button> </td>
+            </tr>
+            <tr>
+                <td> <button onclick="przecinek()">,</button> </td>
+                <td> <button onclick="jedenprzezx()">1/x</button> </td>
+                <td> <button onclick="reszta()">%</button> </td>
+                <td> <button onclick="pierwiastek()">&radic;x</button> </td>
+            </tr>
+        </table>
+        <script src="skrypt.js"></script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablica</title>
+    </head>
+    <body>
+        <script>
+            /*let tabliczb=[0,1,2,3,4,5,6];
+            let w=tabliczb.length-1;
+            let tabowoce=["jabłko","banan","gruszka"];
+            for (let a=0;a<3;a++) {
+                document.write(a+" "+tabowoce[a]);
+                document.write("<br>");
+            }
+
+            for (let a=0;a<=w;a++) {
+                document.write(a+" "+tabliczb[a]);
+                document.write("<br>");
+            }
+
+*/
+
+            let slowo2="";
+            let slowo=prompt("Podaj wyraz");
+            document.write(slowo);
+
+            //document.write(slowo+" ");
+            let dl=slowo.length-1;
+            for (let b=dl;b>=0;b--) {
+                slowo2+=(slowo[b]);
+            }
+
+            if (slowo2==slowo) {
+                document.write(" to jest palindrom");
+            }
+            else {
+                document.write(" to nie jest palindrom")
+            }
+        </script>
+    </body>
+</html>

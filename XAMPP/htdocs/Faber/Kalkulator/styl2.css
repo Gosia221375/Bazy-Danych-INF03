@@ -1,0 +1,25 @@
+button {
+    background-color: rgb(106, 186, 233);
+    width: 35px;
+    height: 30px;
+    color: rgb(83, 97, 177);
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid rgb(235, 142, 196);
+    margin: 4px;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+table, td, tr {
+    margin: auto;
+    border: 4px solid rgb(63, 56, 56);
+    background-color: black;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}

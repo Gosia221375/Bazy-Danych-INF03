@@ -1,0 +1,54 @@
+#main {
+    display: flex;
+}
+
+#header {
+    background-color: #1C59A7;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+#lewy {
+    background-color: #3A70B5;
+    width: 33%;
+    height: 200px;
+}
+
+#srodkowy {
+    background-color: #5A8AC8;
+    width: 33%;
+    height: 200px;
+}
+
+#prawy {
+    background-color: #86ACDD;
+    text-align: center;
+    width: 34%;
+    height: 200px;
+}
+
+#dolny {
+    background-color: #86ACDD;
+    text-align: center;
+    height: 300px;
+}
+
+#dolny h2 {
+    margin: 0;
+}
+
+#footer {
+    background-color: #1C59A7;
+    color: white;
+}
+
+#prawy p a {
+    background-color: yellow;
+    color: blue;
+    padding: 10px;
+}
