@@ -1,0 +1,60 @@
+<section id="glowny">
+   <p>Podaj rozmiar tekstu w procentach: </p>
+   <input type="number" id="procent"> %
+   <p>
+      <select id="styl">
+	     
+          <option value="normal">prosty</option>
+          <option value="italic">kursywa</option>
+	
+      </select>
+   </p>
+   <p>Jakim kolorem sformatować tekst? </p>
+   <button type="button" id="r" onclick="red()">Czerwony</button>
+   <button type="button" id="g" onclick="green()">Zielony</button>
+   <button type="button" id="b" onclick="blue()">Niebieski</button>
+   <p>Jakim kolorem zmienić tło? </p>
+   <button type="button" id="bgRed" onclick="changeBackgroundColor('red')">Czerwone</button>
+
+   <p>Jakim stylem czcionki zmienić tekst?</p>
+   <button type="button" onclick="changeFontStyle('Arial')">Arial</button>
+
+   <p id="wynik">To jest przykład paragrafu, który może być dowolnie formatowany przez JavaScript</p>
+</section>
+
+<script>
+    // Funkcja do zmiany rozmiaru tekstu na podstawie procentów
+    document.getElementById("procent").addEventListener("input", function() {
+        let procent = document.getElementById("procent").value;
+        document.getElementById("wynik").style.fontSize = procent + "%";
+    });
+
+    // Funkcja do zmiany stylu czcionki (np. kursywa, normalny)
+    document.getElementById("styl").addEventListener("change", function() {
+        let styl = document.getElementById("styl").value;
+        document.getElementById("wynik").style.fontStyle = styl;
+    });
+
+    // Funkcje do zmiany koloru tekstu
+    function red() {
+        document.getElementById("wynik").style.color = "red";
+    }
+
+    function green() {
+        document.getElementById("wynik").style.color = "green";
+    }
+
+    function blue() {
+        document.getElementById("wynik").style.color = "blue";
+    }
+
+    // Funkcje do zmiany koloru tła
+    function changeBackgroundColor(color) {
+        document.getElementById("wynik").style.backgroundColor = color;
+    }
+
+    // Funkcja do zmiany czcionki
+    function changeFontStyle(font) {
+        document.getElementById("wynik").style.fontFamily = font;
+    }
+</script>

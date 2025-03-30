@@ -1,0 +1,18 @@
+function ocenaSlownie(punkty) {
+    if (punkty >= 0 && punkty <= 10) return "niedostateczny";
+    if (punkty >= 11 && punkty <= 20) return "dopuszczający";
+    if (punkty >= 21 && punkty <= 30) return "dostateczny";
+    if (punkty >= 31 && punkty <= 40) return "dobry";
+    if (punkty >= 41 && punkty <= 50) return "bardzo dobry";
+    if (punkty >= 51 && punkty <= 55) return "celujący";
+    return "Nieznana liczba punktów";
+}
+
+// Przykłady użycia
+document.write(ocenaSlownie(5));  // "niedostateczny"
+document.write(ocenaSlownie(15)); // "dopuszczający"
+document.write(ocenaSlownie(25)); // "dostateczny"
+document.write(ocenaSlownie(35)); // "dobry"
+document.write(ocenaSlownie(45)); // "bardzo dobry"
+document.write(ocenaSlownie(53)); // "celujący"
+document.write(ocenaSlownie(60)); // "Nieznana liczba punktów"
