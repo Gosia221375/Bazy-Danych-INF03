@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Language" content="pl" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Test</title> 
+<script language="javascript"> 
+function sprawdz() 
+{ 
+punkty=0; 
+//radio button 
+if(f.p1[1].checked) punkty++; 
+if(f.p2[1].checked) punkty++; 
+if(f.p3[2].checked) punkty++; 
+if(f.p4[1].checked) punkty++; 
+if(f.p5[0].checked) punkty++; 
+//pole tekstowe 
+if(f.p6.value=="HTML") punkty++;  
+//checkbox 
+if(f.p7[1].checked && f.p7[2].checked) punkty++; 
+//select/option 
+if(f.p8.selectedIndex==2) punkty++; 
+//alert("punkty="+punkty); 
+
+let ocena;
+if (punkty<=1) {ocena="niedostateczny";}
+if ((punkty==2) || (punkty==3)) {ocena="dopuszczający";}
+if ((punkty==4) || (punkty==5)) {ocena="dostateczny";}
+if ((punkty==6) || (punkty==7)) {ocena="dobry";}
+if (punkty==8) {ocena="bardzo dobry";}
+
+document.getElementById("wynik").innerHTML="Otrzymałeś/aś ocenę "+ocena;
+
+//alert("Ocena: "+ocena);
+//textarea 
+//alert("Uwagi:"+f.p9.value); 
+} 
+</script> 
+</head> 
+<body> 
+<h1>Test - Jan Kowalski</h1> 
+<h1 id="wynik"></h1>
+<form method="post" action="" name="f"> 
+1. Znacznik nowej linii to<br /> 
+<input name="p1" type="radio" />&lt;hr&gt;<br /> 
+<input name="p1" type="radio" />&lt;br&gt;<br /> 
+<input name="p1" type="radio" />&lt;b&gt;<br /> 
+<input name="p1" type="radio" /> &lt;i&gt;<br /> 
+<br /> 
+2. W przedstawionym algorytmie znajduje się<br /> 
+<input name="p2" type="radio" />3 bloki wprowadzania danych<br /> 
+<input name="p2" type="radio" />3 bloki porównania<br /> 
+<input name="p2" type="radio" />3 bloki operacyjne<br /> 
+<input name="p2" type="radio" />2 bloki wprowadzania danych <br /> 
+<img alt="" src="z1.png" width="587px" height="560px" /><br /> 
+<br /> 
+
+3. Jakim znacznikiem robimy akapit?<br /> 
+<input name="p3" type="radio" />&lt;hr&gt;<br /> 
+<input name="p3" type="radio" />&lt;b&gt;<br /> 
+<input name="p3" type="radio" />&lt;p&gt;<br /> 
+<input name="p3" type="radio" />&lt;h1&gt;<br /> 
+<br /> 
+
+4. Jakim znacznikiem pogrubiamy?<br /> 
+<input name="p4" type="radio" />&lt;hr&gt;<br /> 
+<input name="p4" type="radio" />&lt;b&gt;<br /> 
+<input name="p4" type="radio" />&lt;p&gt;<br /> 
+<input name="p4" type="radio" />&lt;h1&gt;<br /> 
+<br /> 
+
+5. Jakim znacznikiem robimy linię?<br /> 
+<input name="p5" type="radio" />&lt;hr&gt;<br /> 
+<input name="p5" type="radio" />&lt;b&gt;<br /> 
+<input name="p5" type="radio" />&lt;p&gt;<br /> 
+<input name="p5" type="radio" />&lt;h1&gt;<br /> 
+
+<br /> 
+6. Jak nazywamy język, w którym piszemy strony WWW<br /> 
+<input name="p6" type="text" /><br /> 
+<br /> 
+7. Które stwierdzenia są prawidłowe:<br /> 
+<input name="p7" type="checkbox" /> Java Script działa po stronie serwera<br /> 
+<input name="p7" type="checkbox" /> Java Script działa po stronie klienta<br /> 
+<input name="p7" type="checkbox" />PHP działa po stronie serwera<br /> 
+<input name="p7" type="checkbox" />PHP działa po stronie klienta<br /> 
+<br /> 
+8. Do przesyłania formularza służy przycisk<br /> 
+<select name="p8"> 
+<option>puste</option> 
+<option>Reset</option> 
+<option>Submit</option> 
+<option>Button</option> 
+</select><br /> 
+<br /> 
+9. Prześlij nam Twoje uwagi<br /> 
+<textarea name="p9" cols="20" rows="2"></textarea><br /> 
+<br /> 
+<input name="Button1" type="button" value="Sprawdź" onclick="sprawdz()" /></form> 
+</body> 
+</html>

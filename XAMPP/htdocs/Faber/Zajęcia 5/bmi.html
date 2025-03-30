@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator BMI</title>
+        <link rel="stylesheet" href="styl.css">
+    </head>
+    <body>
+        <div id="panel">
+            <div id="box">
+                <h1>Kalkulator BMI</h1>
+                <table>
+                    <tr>
+                        <td>Podaj wzrost w cm: </td>
+                        <td><input type="text" id="wzrost"></td>
+                    </tr>
+                    <tr>
+                        <td>Podaj masę w kg: </td>
+                        <td><input type="text" id="masa"></td>
+                    </tr>
+                </table>
+                
+                <button type="button" onclick="oblicz()">Oblicz</button>
+                
+                <h1>BMI</h1>
+                <p id="wynik"></p>
+            </div>
+
+            <script>
+                function oblicz() {
+                    let wzrostm=parseFloat(document.getElementById("wzrost").value)/100;
+                    let waga=parseFloat(document.getElementById("masa").value);
+                    let kwadrat=wzrostm**2;    //let kwadrat=Math.pow(wzrostm,2);
+                    let bmi=waga/kwadrat;
+
+
+                    if (bmi<16) {
+                        document.getElementById("wynik").innerHTML="wygłodzenie";
+                        document.getElementById("wynik").style.backgroundColor="red";
+                    }
+                    if ((bmi>=16) && (bmi<17)) {
+                        document.getElementById("wynik").innerHTML="wychudzenie";
+                        document.getElementById("wynik").style.backgroundColor="orange";
+                    }
+                    if ((bmi>=17) && (bmi<18.5)) {
+                        document.getElementById("wynik").innerHTML="niedowaga";
+                        document.getElementById("wynik").style.backgroundColor="yellow";
+                    }
+                    if ((bmi>=18.5) && (bmi<25)) {
+                        document.getElementById("wynik").innerHTML="waga prawidłowa";
+                        document.getElementById("wynik").style.backgroundColor="green"
+                    }
+                    if ((bmi>=25) && (bmi<30)) {
+                        document.getElementById("wynik").innerHTML="nadwaga";
+                        document.getElementById("wynik").style.backgroundColor="yellow";
+                    }
+                    if ((bmi>=30) && (bmi<35)) {
+                        document.getElementById("wynik").innerHTML="otyłość I stopnia";
+                        document.getElementById("wynik").style.backgroundColor="orange";
+                    }
+                    if ((bmi>=35) && (bmi<40)) {
+                        document.getElementById("wynik").innerHTML="otyłość II stopnia";
+                        document.getElementById("wynik").style.backgroundColor="red";
+                    }
+                    if (bmi>=40) {
+                        document.getElementById("wynik").innerHTML="otyłość III stopnia";
+                        document.getElementById("wynik").style.backgroundColor="red";
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

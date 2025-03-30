@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zamiana Celsjusza na Fahrenheita</title>
+    </head>
+    <body>
+        Podaj stopnie Celsjusza: <input type="text" id="celsjusz">
+        <button type="button" onclick="zamien()">Zamień</button>
+        <p id="wynik"></p>
+
+        <script>
+            function zamien() {
+                let stopienC=parseFloat(document.getElementById("celsjusz").value);
+                let Fahrenheita=(stopienC * 9/5) + 32;
+                document.getElementById("wynik").innerHTML="Temperatura w Fahrenheitach to " + Fahrenheita;
+            }
+        </script>
+    </body>
+</html>
