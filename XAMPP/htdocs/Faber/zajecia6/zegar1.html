@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Zegar</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
+        <style>
+            body{
+                background: blue;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* poziomo */
+  align-items: center;     /* pionowo */
+
+            }
+            #container{
+                font-family: 'Segment7Standard';
+                font-weight: normal;
+                font-style: italic;
+ 		  width: 730px;
+ 		height: 300px;
+  		background: lightblue;
+            }
+
+             #godziny{
+                
+                font-size:150px;
+             }
+
+             #data{
+		text-align: center;
+                font-size:100px;
+             }
+        </style>
+</head>
+<body>
+    <div id="container">
+      <div id="data">asdda</div>
+      <div id="godziny"></div>
+    </div>
+    <script>
+
+        function setczas(){
+            let czas = new Date(); // Poprawione utworzenie obiektu daty
+            let godzina= czas.toLocaleTimeString();
+            let data= czas.toLocaleDateString();
+            document.getElementById("data").innerText = data;
+            document.getElementById("godziny").innerText = godzina;              }
+
+            setInterval(setczas,1000);
+
+
+    </script>
+    
+</body>
+</html>

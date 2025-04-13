@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zegar</title>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
+        <style>
+            #czas {
+                font-family: 'Segment7Standard';
+                font-weight: normal;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #data {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: normal;
+                font-style: italic;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <SCRIPT language="JavaScript">
+            function odliczanie() {
+                let zmienna=new Date();
+                let dzien=zmienna.getDate();
+                let miesiac=zmienna.getMonth()+1;
+                let rok=zmienna.getFullYear();
+                let godzina=zmienna.getHours();
+                let minuta=zmienna.getMinutes();
+                let sekunda=zmienna.getSeconds();
+
+                let miesiacslownie;
+                switch(miesiac) {
+                    case 1: miesiacslownie="STYCZEŃ"; break;
+                    case 2: miesiacslownie="LUTY"; break;
+                    case 3: miesiacslownie="MARZEC"; break;
+                    case 4: miesiacslownie="KWIECIEŃ"; break;
+                    case 5: miesiacslownie="MAJ"; break;
+                    case 6: miesiacslownie="CZERWIEC"; break;
+                    case 7: miesiacslownie="LIPIEC"; break;
+                    case 8: miesiacslownie="SIERPIEŃ"; break;
+                    case 9: miesiacslownie="WRZESIEŃ"; break;
+                    case 10: miesiacslownie="PAŹDZIERNIK"; break;
+                    case 11: miesiacslownie="LISTOPAD"; break;
+                    case 12: miesiacslownie="GRUDZIEŃ"; break;
+                    default: alert("zła wartość");
+                }
+
+                //alert(dzien+" "+miesiac+" "+rok);
+                document.getElementById("czas").innerHTML=("<h1>"+godzina+" : "+minuta+" : "+sekunda+"</h1>");
+                document.getElementById("data").innerHTML=("<h2>Dzisiaj jest "+dzien+" "+miesiacslownie+" "+rok+"</h2>");
+            }
+
+            setInterval(odliczanie, 1000);
+        </script>
+        <div id="data">
+
+        </div>
+        <div id="czas">
+
+        </div>
+        <p>Stronę zbudowałam ja! :)</p>
+    </body>
+</html>
