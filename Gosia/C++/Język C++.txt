@@ -1,0 +1,24 @@
+Język C++
+
+1. Posiada główną funkcję main {}
+void - funkcja nie zwraca nic
+Jeśli "return 0", nie został znaleziony żaden błąd
+
+2. Kompilator przetwarza język użyty przez programistę na kod binarny
+3. CPU - układ scalony? Central Processing Unit
+3. Program = algorytm + struktury danych
+
+
+
+main {
+	int a=2;
+
+	c=a+b;
+	c=c+1;
+	c=c++, c--;
+	//albo c=++c
+	c=z*c;
+
+	cout>>a //drukuje zawartość zmiennej c
+	cin>>b //wprowadza wartość zmiennej z klawiatury
+}
