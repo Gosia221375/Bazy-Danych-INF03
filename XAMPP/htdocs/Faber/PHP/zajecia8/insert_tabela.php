@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Obsługa SQL</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h3>Dodawanie rekordów do tabeli:</br></h3>
+	<form action="insert_tabela.php" method="POST">
+		<table border="1" align="center">
+			<tr bgcolor="#FF9999">
+				<th width="150">Nazwisko</th>
+				<th width="100">Głosy</th>
+					</tr>
+			<tr>
+				<td>
+					<input type="text" name="Nazwisko" width="100%">
+				</td>
+				
+				<td>
+					<input type="text" name="Glosy" width="100%">
+				</td>
+			</tr>
+		</table>
+		</br>
+		<center>
+		<input type="reset" value="REZYGNACJA">
+		<input type="submit" value="DODAJ REKORD">
+		</center>
+	</form>
+	
+	<?php
+		$url = 'localhost';
+		$identyfikator = 'root';
+		$haslo = '';
+		$baza_danych='wybory';
+		$tabela='kandydaci';
+		
+		if (isset($_POST["Nazwisko"]))
+		{
+		
+			//zmienne przechwycone
+			$nazwisko=$_POST["Nazwisko"];
+			$glosy=$_POST["Glosy"];
+			
+		
+			$id_pol=mysqli_connect($url,$identyfikator,$haslo,$baza_danych) or die("</br>BŁĄD POŁĄCZENIA Z BAZĄ ".$baza_danych);
+
+			$zapytanie="insert into ".$tabela." (Nazwisko,Glosy) values 
+			('$nazwisko','$glosy')";
+			
+			mysqli_query($id_pol,$zapytanie) or die("<b>Błąd dodawania rekordu. Zapytanie:</b></br>".$zapytanie);
+			echo("</br>Rekord został utworzona");
+
+			mysqli_close($id_pol);
+			
+		}
+	?>
+	
+</body>
+</html>
